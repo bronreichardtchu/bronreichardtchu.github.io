@@ -1904,10 +1904,17 @@ input, select, textarea {
 		min-width: 15em;
 		white-space: nowrap;
 		text-align: left;
+		box-sizing: border-box;
 	}
 
 	#nav .dropdown-menu a:hover {
 		background-color: #d59789; /* Highlight color on hover */
+	}
+
+	/* Indented dropdown item */
+	#nav .dropdown-menu a.indented {
+		padding-left: 40px; /* Indent the item */
+		/*margin-left: 40px; */
 	}
 
 	/* Show dropdown menu on hover */
