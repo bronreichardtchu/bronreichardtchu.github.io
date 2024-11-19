@@ -1,5 +1,7 @@
+/*
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 @import url("fontawesome-all.min.css");
+/*
 
 /*
 	Astral by HTML5 UP
@@ -1371,7 +1373,7 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-size: 2.4em;
+		font-size: 2.3em;
 		letter-spacing: -0.015em;
 	}
 
@@ -1564,7 +1566,7 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 2em 0;
+			margin: 0 0 0 0;
 		}
 
 		.image.left {
@@ -1573,14 +1575,40 @@ input, select, textarea {
 		}
 
 		.image.centered {
-			display: block;
-			margin: 0 0 2em 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: -0.5em 0 -0.5em 0;
 		}
 
 			.image.centered img {
-				margin: 0 auto;
+				/*margin: 0 auto;*/
 				width: auto;
+				max-width: 100%;
+				height: auto;
 			}
+
+/* Figure and Figure Caption */
+
+	figure {
+		display: flex;
+		flex-direction: column; /* Ensures the caption is below the image */
+		align-items: center; /* Centers both image and caption */
+		text-align: center; /* Centers text within the caption */
+		margin: 0 auto 0.5em; /* Centers the figure on the page */
+	}
+
+	figure img {
+		max-width: 100%; /* Ensures the image is responsive */
+		height: auto;
+	}
+
+	figcaption {
+		font-size: 0.8em; /* Slightly smaller font for the caption */
+		color: #858585; /* Subtle color for the caption text */
+		margin-top: 0.3em; /* Space between the image and caption */
+	}
+
 
 /* Button */
 
@@ -1884,11 +1912,11 @@ input, select, textarea {
 		position: absolute;
 		top: 100%; /* Position below the parent link */
 		left: 0;
-		background-color: #444; /* Background color of the dropdown */
+		background-color: #4a323e; /* Background color of the dropdown */
 		padding: 10px 0;
 		border-radius: 5px;
 		z-index: 1000;
-		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
 		width: auto;
 		min-width: 15em;
 	}
@@ -1900,6 +1928,7 @@ input, select, textarea {
 		color: white;
 		text-decoration: none;
 		font-size: 1.0em;
+		font-weight: bold;
 		width: auto;
 		min-width: 15em;
 		white-space: nowrap;
