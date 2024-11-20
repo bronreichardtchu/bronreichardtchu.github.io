@@ -1709,6 +1709,22 @@ input, select, textarea {
 
 		}
 
+		.download-btn {
+			display: inline-block;
+			padding: 2px 20px;
+			color: white;
+			background-color: #d59789;
+			text-decoration: none;
+			border-radius: 5px;
+			font-size: 1em;
+			transition: background-color 0.3s ease;
+		}
+		
+		.download-btn:hover {
+			background-color: #4a323e;
+		}
+		
+
 /* List */
 
 	ul {
