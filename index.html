@@ -24,7 +24,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<a href="#" class="icon"><i class="fa-solid fa-home"></i><span>Home</span></a>
-						<div class="dropdown">
+						<div class="nav dropdown">
 							<a href="#researchinterests" class="icon"><i class="fa-solid style2 major fa-chart-column"></i><span>Research</span></a>
 							<div class="dropdown-menu">
 								<a href="#researchinterests">Research Overview</a>
@@ -364,6 +364,31 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				document.addEventListener('DOMContentLoaded', () => {
+					// Get all navigation and dropdown links
+					const navLinks = document.querySelectorAll('#nav a');
+					const sections = document.querySelectorAll('section');
+			
+					// Function to update the active class
+					const setActiveLink = (link) => {
+						// Remove 'active' from all links
+						navLinks.forEach((nav) => nav.classList.remove('active'));
+			
+						// Add 'active' to the clicked link
+						link.classList.add('active');
+					};
+			
+					// Add click event to all links
+					navLinks.forEach((link) => {
+						link.addEventListener('click', (e) => {
+							setActiveLink(link);
+						});
+					});
+				});
+			</script>
+			
 
 	</body>
 </html>
